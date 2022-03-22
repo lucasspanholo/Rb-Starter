@@ -10,6 +10,4 @@ numbers.each do |key, value|
     end
 end
 
-
-puts maior_num
-#puts"o maior numero eh o da chave #{result[0]} com o valor #{result[1]}"
+puts"o maior numero eh o da chave #{result[0]} com o valor #{result[1]}"

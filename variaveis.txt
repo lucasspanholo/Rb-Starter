@@ -1,0 +1,16 @@
+Variavel local:
+    -pode ser acessada apenas onde foi criada
+    -é declarada com a primeira letra de seu nome sendo uma letra minuscula ou sublinhado
+
+Variavel Global
+    -pode ser acessada em qualquer lugar do programa
+    -declarada com o prefixo $
+    -desencorajada
+
+Variavel de classe
+    -pode ser acessada em qualquer lugar da classe onde foi declarada e seu valor é compartilhado entre todas as instancias de sua classe
+    -declarada com o prefixo @@
+
+Variavel de instancia
+    -semelhante a variavel de classe, tendo como unica diferenca o valor que nao é compartilhado entre todas as instancias de sua classe
+    -declarada com prefixo @
