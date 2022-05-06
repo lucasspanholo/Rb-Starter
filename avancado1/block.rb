@@ -1,6 +1,12 @@
-def foo(name, &block)
-    @name = name
-    block.call
-end 
+def foo
+    if block_given?
+        numbers.each do |key,value|
+            block.call(key,value)
+        end
+    end
+end
 
-foo ('leo') {puts"hello #{@name}"}
+numbers = {2 => 2, 3 => 3, 4 => 4}
+
+foo(numbers) do |key,value|
+    

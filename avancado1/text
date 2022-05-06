@@ -36,3 +36,79 @@ foo{puts "exec the block"}
 
 ###########################################
 
+def foo(name, &block)
+    @name = name
+    block.call
+end 
+
+foo ('leo') {puts"hello #{@name}"}
+
+#######################################3
+
+def foo
+    if block_given?
+        yield
+    else
+        puts "sem parametro bloco"
+    end
+end
+
+foo
+foo{puts "com parametro bloco"}
+
+###########
+
+def foo
+    if block_given?
+        numbers.each do |key,value|
+            block.call(key,value)
+        end
+    end
+end
+
+numbers = {2 => 2, 3 => 3, 4 => 4}
+
+foo(numbers) do |key,value|
+    ##########3
+
+
+    LAMBDA PODE ARMAZENAR DENTRO DE VARIAVEL
+lambda = ' -> '
+
+
+first_lambda = lambda {puts "primeira lambda"}
+               # ou ->
+
+first_lambda.call
+first_lambda.call
+first_lambda.call
+####################3
+first_lambda = -> (names){names.each{|name |puts name}}
+
+names = ["joao", "maria", "pedro"]
+
+first_lambda.call(names)
+################    
+
+my_lambda = lambda do |numbers|
+    index=0 
+    puts 'numero atual + proximo numero'
+    numbers.each do |number|
+      return if numbers[index] == numbers.last
+      puts "(#{numbers[index]}) + (#{numbers[index + 1]})"
+      puts numbers[index] + numbers [index + 1]
+      index += 1
+      end
+    end
+    
+    numbers = [1,2,3,4]
+    
+    my_lambda.call(numbers)
+    
+    numbers = [8,9,3,4]
+    
+    my_lambda.call(numbers)
+
+    #######################
+
+    
